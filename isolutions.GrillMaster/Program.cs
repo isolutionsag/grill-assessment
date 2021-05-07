@@ -11,7 +11,7 @@ namespace isolutions.GrillMaster
             var serviceProvider = BuildAndGetServiceProvider();
             var grillMasterResolver = serviceProvider.GetService<IGrillMasterResolver>();
 
-            grillMasterResolver.Resolve();
+            grillMasterResolver.Resolve().Wait();
 
             Console.ReadKey();
         }
