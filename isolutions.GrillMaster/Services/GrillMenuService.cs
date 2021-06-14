@@ -15,12 +15,12 @@ namespace isolutions.GrillMaster.Services
             this.httpClientFactory = httpClientFactory;
         }
 
-        public async Task<IEnumerable<GrillMenu>> GetGrillMenus()
+        public async Task<List<GrillMenu>> GetGrillMenus()
         {
             var httpClient = httpClientFactory.CreateClient();
 
             var responseString = await httpClient.GetStringAsync("http://isol-grillassessment.azurewebsites.net/api/GrillMenu");
-            var menus = JsonConvert.DeserializeObject<IEnumerable<GrillMenu>>(responseString);
+            var menus = JsonConvert.DeserializeObject<List<GrillMenu>>(responseString);
 
             return menus;
         }

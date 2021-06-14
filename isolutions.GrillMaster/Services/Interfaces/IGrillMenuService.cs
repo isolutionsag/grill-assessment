@@ -6,6 +6,6 @@ namespace isolutions.GrillMaster.Services
 {
     public interface IGrillMenuService
     {
-        Task<IEnumerable<GrillMenu>> GetGrillMenus();
+        Task<List<GrillMenu>> GetGrillMenus();
     }
 }

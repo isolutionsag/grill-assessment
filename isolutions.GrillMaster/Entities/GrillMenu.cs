@@ -7,6 +7,6 @@ namespace isolutions.GrillMaster.Entities
     {
         public Guid Id { get; set; }
         public string Menu { get; set; }
-        public IEnumerable<GrillItem> Items { get; set; }
+        public List<GrillItem> Items { get; set; }
     }
 }
